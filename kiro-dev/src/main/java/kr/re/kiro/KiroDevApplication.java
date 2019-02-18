@@ -5,6 +5,8 @@ import javax.annotation.PreDestroy;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +16,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
+
+import kr.re.kiro.config.Properties;
 
 /**
  * <pre>
@@ -31,6 +35,12 @@ public class KiroDevApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(KiroDevApplication.class);
 
+	@Value("${file.rootdir}")
+	private String fileRootDir;
+
+	@Value("${file.per.directory}")
+	private String filePerDirectory;
+	
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(KiroDevApplication.class, args);
 		Server server = context.getBean(Server.class);
@@ -48,6 +58,14 @@ public class KiroDevApplication {
 		return new RestTemplate();
 	}
 
+	@Bean
+	public CommandLineRunner runner() {
+		return (a) -> {
+			Properties.FILE_ROOTDIR = fileRootDir;
+			Properties.FILE_PER_DIRECTORY = filePerDirectory;
+		};
+	}
+	
 	@Bean
 	Server server() {
 		return new Server();

@@ -15,6 +15,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * <pre>
+ * kr.re.kiro
+ * KiroDevApplication.java
+ * </pre>
+ *
+ * @Author : Kim sungkeun
+ * @Date   : 2019. 2. 18.
+ * @Version: 
+ */
 @SpringBootApplication
 @EnableAutoConfiguration
 public class KiroDevApplication {

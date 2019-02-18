@@ -34,6 +34,9 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
+	@Column(name = "login_id", length = 20, unique = true)
+	private String loginId;
+	
 	@Column(name = "email", length = 50, unique = true)
 	private String email;
 
@@ -65,6 +68,14 @@ public class User {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getLoginId() {
+		return loginId;
+	}
+
+	public void setLoginId(String loginId) {
+		this.loginId = loginId;
 	}
 
 	public String getEmail() {
@@ -126,6 +137,7 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ""
+				+ ", loginId=" + loginId + ""
 				+ ", email=" + email + ""
 				+ ", password=" + password + ""
 				+ ", name=" + name + ""

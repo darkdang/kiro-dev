@@ -21,4 +21,7 @@ public interface UserRepository  extends JpaRepository<User, Integer> {
 
 	@Query
 	public User findByLoginId(String loginId);
+	
+	@Query
+	public void deleteByLoginId(String loginId);
 }

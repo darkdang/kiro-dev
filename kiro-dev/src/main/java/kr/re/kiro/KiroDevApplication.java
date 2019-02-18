@@ -29,7 +29,7 @@ public class KiroDevApplication {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
-		logger.debug("Welcome Start CCEDA-WEB ");
+		logger.debug("Welcome Start KIRO-WEB ");
 		return "index";
 	}
 

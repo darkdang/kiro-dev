@@ -20,6 +20,7 @@ import kr.re.kiro.type.TrueType;
  * <pre>
  * kr.re.kiro.model
  * QNA.java
+ * QnA
  * </pre>
  *
  * @Author : Kim sungkeun
@@ -35,13 +36,13 @@ public class QNA {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	
-	@Column(name = "board_no", length = 8)
+	@Column(name = "qna_no", length = 8)
 	private Integer boardNo;
 	
-	@Column(name = "board_hits", length = 16)
+	@Column(name = "qna_hits", length = 16)
 	private Integer boardHits;
 	
-	@Column(name = "board_re", length = 8, nullable = false)
+	@Column(name = "qna_re", length = 8, nullable = false)
 	@Enumerated(EnumType.ORDINAL)
 	private TrueType trueType;
 	

@@ -17,5 +17,7 @@ import kr.re.kiro.model.Announce;
  */
 @Repository
 public interface AnnounceRepository extends JpaRepository<Announce, Integer> {
+	
+	public Announce findByAnnounceNo(Integer AnnounceNo);
 
 }

@@ -47,12 +47,6 @@ public class KiroDevApplication {
 		server.init();
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Model model) {
-		logger.debug("Welcome Start KIRO-WEB ");
-		return "index";
-	}
-
 	@Bean
 	public RestTemplate restTemplate() {
 		return new RestTemplate();

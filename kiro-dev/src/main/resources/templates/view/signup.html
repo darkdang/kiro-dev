@@ -1,11 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+
+  <title>Kiro Kyungbuk</title>
+
+  <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../css/login.css"/>
+  <link rel="stylesheet" href="../css/modern-business.css"/>
+
 </head>
+
 <body>
-signup
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">경북 분원</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              	경북분원 소개
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="/abt/greet">인사말</a>
+              <a class="dropdown-item" href="/abt/org">조직도 및 업무별 담당자</a>
+              <a class="dropdown-item" href="/abt/map">찾아오시는길</a>
+           	</div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              	연구분야
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="/dev/res-field">연구분야</a>
+              <a class="dropdown-item" href="/dev/res-result">연구성과</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              	알림마당
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+              <a class="dropdown-item" href="/alert/business">공지사항</a>
+              <a class="dropdown-item" href="/alert/notice">사업공고</a>
+              <a class="dropdown-item" href="/alert/qna">Q/A</a>
+            </div>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="/login">로그인</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">회원가입</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="panel panel-login">
+						<div class="panel-heading">
+							<div class="row">
+								<div class="media-body">
+									<h2 class="media-heading">계정 만들기</h2>
+								</div>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-lg-12">
+									<form id="register-form" action="signup" method="post" role="form" style="display: block;">
+										<div class="form-group">
+											<h5>이메일 주소</h5>
+										</div>
+										<div class="form-group">
+											<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="이메일 주소를 입력하세요" th:attr="value=${email}"/>
+										</div>
+										<div class="form-group">
+											<h5>비밀번호</h5>
+										</div>
+										<div class="form-group">
+											<input type="password" name="passwd" id="passwd" tabindex="2" class="form-control" placeholder="비밀번호를 입력하세요" th:attr="value=${passwd}"/>
+										</div>
+										<div class="register-passwd">
+											<h6><font color="#cc33ff">8-16자의 영문 대/소문자, 숫자, 특수문자 혼용</font></h6>
+										</div>
+										<div class="form-group">
+											<h5>비밀번호 확인</h5>
+										</div>
+										<div class="form-group">
+											<input type="password" name="confirm-passwd" id="confirm-passwd" tabindex="3" class="form-control" placeholder="같은 비밀번호를 입력하세요" th:attr="value=${passwd2}"/>
+										</div>
+										<div class="form-group">
+											<h5>이름</h5>
+										</div>
+										<div class="form-group">
+											<input type="text" name="username" id="username" tabindex="4" class="form-control" placeholder="이름을 입력하세요" th:attr="value=${username}"/>
+										</div>
+										<div class="form-group">
+											<h5><input type="checkbox" name="agreePolicyCheck" id="agreePolicyCheck" tabindex="5" th:checked="${agreePolicyCheck}"/>
+												<a href="#" onclick="window.open('../policy/use-policy.html')">이용약관, 개인정보 처리방침</a>
+												<span>에 모두 동의합니다.</span>
+											</h5>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-sm-6 col-sm-offset-3">
+													<input type="button" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-login" th:value="회원가입" onclick="submitForm()"/>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

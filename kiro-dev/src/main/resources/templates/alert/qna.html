@@ -4,27 +4,28 @@
 <head>
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
 
   <title>KBKIRO</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet"/>
 
   <!-- Custom styles for this template -->
-  <link href="../css/modern-business.css" rel="stylesheet">
+  <link href="../css/modern-business.css" rel="stylesheet"/>
 
 </head>
 
 <body>
 
 <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light fixed-top">
-    <div class="container">
-     <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>&nbsp;&nbsp;
-      <a class="navbar-brand" style="color:black;font-weight:bold" href="/">경북 분원</a>
+ <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top"  style="background-color:black;">
+    <div class="container mb-1">
+     <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>
+      <a class="navbar-brand" style="color:black;font-weight:bold;padding-top: 11px;padding-left: 7px" href="/">경북분원</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -127,10 +128,21 @@
   </div>
   <!-- /.container -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-light">
+   <!-- Footer -->
+  <hr/>
+  <footer class="py-2 bg-white">
     <div class="container">
-      <p class="m-0 text-center text-">Copyright &copy; Your Website 2019</p>
+	    <div class="row">
+	    	<div class="col-lg-3 mb-1">
+	    		<img th:src="@{/images/KIRO-ci.png}" style="width:230px;height:50px;" />
+	    	</div>
+	    	<div class="col-lg-9 mb-1" style="font-size: 13px">
+		      36728 경상북도 안동시 경동로 1486-18 리서치동 101호 (한국로봇융합연구원 경북분원)<br/>
+		          대표전화 : 054-821-5411 FAX : 054-823-5411<br/>
+		      COPYRIGHT 2011 KOREA INSTITUTE OF ROBOT CONVERGENCE. ALL RIGHT RESERVED.
+	    	</div>
+	    	
+      	</div>
     </div>
     <!-- /.container -->
   </footer>

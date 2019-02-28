@@ -8,7 +8,7 @@
   <meta name="description" content=""/>
   <meta name="author" content=""/>
 
-  <title>Kiro Kyungbuk</title>
+  <title>KBKIRO</title>
 
   <link rel="stylesheet" href="../css/bootstrap.min.css"/>
   <link rel="stylesheet" href="../css/login.css"/>
@@ -19,16 +19,17 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="/">경북 분원</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+     <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>&nbsp;&nbsp;
+      <a class="navbar-brand" style="color:black;font-weight:bold" href="/">경북 분원</a>
+      <button class="navbar-toggler navbar-toggler-right navbar-light bg-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon navbar-dark bg-dark"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               	경북분원 소개
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
@@ -38,7 +39,7 @@
            	</div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               	연구분야
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -47,7 +48,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               	알림마당
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -57,10 +58,10 @@
             </div>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="/login">로그인</a>
+            <a class="nav-link" style="color:black" href="/login">로그인</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/signup">회원가입</a>
+            <a class="nav-link" style="color:black" href="/signup">회원가입</a>
           </li>
         </ul>
       </div>
@@ -69,7 +70,7 @@
 
   <div class="container">
 	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
+		<div class="col-md-12 col-md-offset-3">
 			<div class="panel panel-login">
 				<div class="panel-heading">
 					<div class="row">
@@ -96,12 +97,12 @@
 										<input type="password" name="passwd" id="passwd" tabindex="2" class="form-control" placeholder="비밀번호를 입력하세요" th:value="${passwd}"/>
 									</div>
 									<div th:if="${message} != null" class="alert alert-danger alert-dismissable text-left" id="message">
-										<button aria-hidden="true" data-sidmiss="alert" class="close" type="button">1111</button>
+										<button aria-hidden="true" data-sidmiss="alert" class="close" type="button"></button>
 										로그인
 									</div>
 									<div class="form-group">
 										<div class="row">
-											<div class="col-sm-6 col-sm-offset-3">
+											<div class="col-sm-12 col-sm-offset-3">
 												<input type="submit" name="login-submit" id="login-submit" tabindex="5" class="form-control btn btn-login" th:value="로그인"/>
 											</div>
 										</div>
@@ -120,9 +121,9 @@
   
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
+  <footer class="py-5 bg-light">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-black">Copyright &copy; Your Website 2019</p>
     </div>
     <!-- /.container -->
   </footer>

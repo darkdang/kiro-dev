@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>KBKIRO</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -21,16 +21,17 @@
 <body>
 
 <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="/">경북 분원</a>
+     <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>&nbsp;&nbsp;
+      <a class="navbar-brand" style="color:black;font-weight:bold" href="/">경북 분원</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               	경북분원 소개
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
@@ -40,7 +41,7 @@
            	</div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               	연구분야
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -49,7 +50,7 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               	알림마당
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
@@ -59,10 +60,10 @@
             </div>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="/login">로그인</a>
+            <a class="nav-link" style="color:black" href="/login">로그인</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/signup">회원가입</a>
+            <a class="nav-link" style="color:black" href="/signup">회원가입</a>
           </li>
         </ul>
       </div>
@@ -73,22 +74,14 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">경북분원 소개
-      <small>조직도 및 업무별 담당자</small>
+    <h1 class="mt-4 mb-3">조직도 및 업무별 담당자
+
     </h1>
 
     <!-- Content Row -->
     <div class="row">
-      <!-- Sidebar Column -->
-      <div class="col-lg-3 mb-4">
-        <div class="list-group">
-          <a href="/abt/greet" class="list-group-item">인사말</a>
-          <a href="/abt/org" class="list-group-item">조직도 및 업무별 담당자</a>
-          <a href="/abt/map" class="list-group-item">찾아오시는길</a>
-        </div>
-      </div>
       <!-- Content Column -->
-      <div class="col-lg-9 mb-4">
+      <div class="col-lg-13 mb-4">
         <h2>Section Heading</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et temporibus, facere perferendis veniam beatae non debitis, numquam blanditiis necessitatibus vel mollitia dolorum laudantium, voluptate dolores iure maxime ducimus fugit.</p>
       </div>
@@ -99,9 +92,9 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
+  <footer class="py-5 bg-light">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <p class="m-0 text-center text-">Copyright &copy; Your Website 2019</p>
     </div>
     <!-- /.container -->
   </footer>

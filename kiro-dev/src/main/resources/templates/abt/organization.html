@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link th:href="@{/css/modern-business.css}" rel="stylesheet" />
+    <link th:href="@{/css/custom.css}" rel="stylesheet" />
 
 </head>
 
@@ -83,9 +84,13 @@
         <!-- Content Row -->
         <div class="row">
             <!-- Content Column -->
-            <div class="col-lg-13 mb-4">
-                <h2>Section Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et temporibus, facere perferendis veniam beatae non debitis, numquam blanditiis necessitatibus vel mollitia dolorum laudantium, voluptate dolores iure maxime ducimus fugit.</p>
+            <div class="col-lg-12 mb-4">
+                <h2 class="tit_cont">조직도</h2>
+                <div class="row">
+                <div class="col-lg-1"></div>
+           		<img class="col-lg-10" th:src="@{/images/img_org.jpg}"/>
+           		<div class="col-lg-1"></div>
+           		</div>
             </div>
         </div>
         <!-- /.row -->

@@ -40,7 +40,7 @@ public class ResearchController {
 	
 	@RequestMapping(value = "/dev/res-result/regist", method = RequestMethod.POST)
 	public ModelAndView resResultRegistPOST(Model model, HttpSession session, RedirectAttributes rttr) throws Exception {
-		noticeService.regist("something");
+		researchService.regist("something");
 		rttr.addFlashAttribute("msg", "success");
 		return new ModelAndView("dev/res-result-regist");
     }

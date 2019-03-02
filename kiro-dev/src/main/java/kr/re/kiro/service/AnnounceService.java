@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import kr.re.kiro.model.Announce;
 import kr.re.kiro.repository.AnnounceRepository;
+import kr.re.kiro.repository.QNARepository;
 
 @Service
 @Transactional
@@ -31,6 +32,24 @@ public class AnnounceService {
 	public Announce findByAnnounceNo(Integer announceNo) {
 		log.debug("findByAnnounceNo()");
 		return announceRepository.findByAnnounceNo(announceNo);
+	}
+	
+	public Object listAll() {
+		log.debug("listAll()..");
+		return null;
+	}
+	
+	public void regist(Object object) {
+		log.debug("regist()..");
+	}
+	
+	public Object read(int id) {
+		log.debug("read()..");
+		return null;
+	}
+	
+	public void modify(Object object) {
+		log.debug("modify()..");
 	}
 
 }

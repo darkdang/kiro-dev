@@ -76,81 +76,97 @@
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">공지사항
-
+        <h1 class="mt-4 mb-3">Q&A
+            <!-- <small>글쓰기</small> -->
         </h1>
-        <form role="form" method="get">
-            <table class="table table-hover">
-                <thead class="thead-light">
-                    <tr>
-                        <th>번호</th>
-                        <th>제목</th>
-                        <th>작성자</th>
-                        <th>작성일</th>
-                        <th>조회수</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="list : ${list}">
-                        <td th:text="${list.id}"></td>
-                        <td><a th:href="@{/alert/notice/read(id=${list.id})}" th:text="${list.subject}"></a></td>
-                        <td th:text="${list.login_id}"></td>
-                        <td th:text="${#dates.format(list.created_on, 'yyyy-MM-dd HH:mm')}"></td>
-		             <td th:text="${list.contents}"></td>
-		         </tr>
-			    </tbody>
-		  </table>
-	      <hr/>
-	      	<ul class="justify-content-center pagination">
-			    <li class="page-item"><a class="page-link" href="#">이전</a></li>
-			    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-			    <li class="page-item"><a class="page-link" href="#">2</a></li>
-			    <li class="page-item"><a class="page-link" href="#">3</a></li>
-			    <li class="page-item"><a class="page-link" href="#">4</a></li>
-			    <li class="page-item"><a class="page-link" href="#">5</a></li>
-			    <li class="page-item"><a class="page-link" href="#">다음</a></li>
-		  	</ul>
-	  	<div class="float-sm-right"><button type="button" class="justify-content-end btn btn-primary">등록</button></div><br/><br/>
-	</form>
-  </div>
-  <!-- /.container -->
-
-   <!-- Footer -->
-  <hr/>
-  <footer class="py-2 bg-white">
-    <div class="container">
-	    <div class="row">
-	    	<div class="col-lg-3 mb-1">
-	    		<img th:src="@{/images/KIRO-ci.png}" style="width:230px;height:50px;" />
-	    	</div>
-	    	<div class="col-lg-9 mb-1" style="font-size: 13px">
-		      36728 경상북도 안동시 경동로 1486-18 리서치동 101호 (한국로봇융합연구원 경북분원)<br/>
-		          대표전화 : 054-821-5411 FAX : 054-823-5411<br/>
-		      COPYRIGHT 2011 KOREA INSTITUTE OF ROBOT CONVERGENCE. ALL RIGHT RESERVED.
-	    	</div>
-	    	
-      	</div>
+        <div class="row">
+            <!-- <div class="col-lg-1"></div> -->
+            <div class="col-lg-12 mb-4">
+                <form role="form" method="post">
+                    <div class="control-group form-group" th:object="${content}">
+                        <input th:field="*{id}" type="hidden">
+                        <div class="controls">
+                            <label for="qnaUserName">작성자</label>
+                            <input th:field="*{user_name}" type="text" class="form-control col-lg-2" id="qnaUserName" />
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>작성일</label><br />
+                            <input th:value="*{created_on}" type="text" class="form-control col-lg-2" id="qnaDate" />
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label for="qnaSubject">제목</label>
+                            <input th:field="*{subject}" type="text" class="form-control" id="qnaSubject">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>내용</label>
+                            <textarea th:field="*{contents}" class="form-control" rows="10" cols="100"></textarea>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>자료첨부</label>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-warning">수정</button>
+                    <button type="submit" class="btn btn-danger">취소</button>
+                </form>
+            </div>
+            <!-- <div class="col-lg-1"></div> -->
+        </div>
     </div>
     <!-- /.container -->
-  </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script th:src="@{/js/jquery.min.js}"></script>
-  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-  <script type="text/javascript">
-	  $(function () {
-	
-			var formObj = $("form[role='form']");
-			console.log(formObj);
-			
-			$(".btn-primary").on("click", function(){
-				formObj.attr("action", "/alert/notice/regist");
-				formObj.attr("method", "get");
-				formObj.submit();
-			});
-			
-		  });
-   </script>
+    <!-- Footer -->
+    <hr />
+    <footer class="py-2 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-1">
+                    <img th:src="@{/images/KIRO-ci.png}" style="width:230px;height:50px;" />
+                </div>
+                <div class="col-lg-9 mb-1" style="font-size: 13px">
+                    36728 경상북도 안동시 경동로 1486-18 리서치동 101호 (한국로봇융합연구원 경북분원)<br />
+                    대표전화 : 054-821-5411 FAX : 054-823-5411<br />
+                    COPYRIGHT 2011 KOREA INSTITUTE OF ROBOT CONVERGENCE. ALL RIGHT RESERVED.
+                </div>
+
+            </div>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            var formObj = $("form[role='form']");
+            console.log(formObj);
+
+            $(".btn-warning").on("click", function() {
+                formObj.attr("action", "/alert/qna/modify");
+                formObj.attr("method", "post");
+                formObj.submit();
+            });
+
+            $(".btn-danger").on("click", function() {
+                formObj.attr("action", "/alert/qna");
+                formObj.attr("method", "get");
+                formObj.submit();
+            });
+
+        });
+    </script>
 
 </body>
 

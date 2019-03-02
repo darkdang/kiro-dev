@@ -3,118 +3,101 @@
 
 <head>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <meta name="description" content=""/>
-  <meta name="author" content=""/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-  <title>KBKIRO</title>
+    <title>KBKIRO</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 
-  <!-- Custom styles for this template -->
-  <link href="../css/modern-business.css" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/modern-business.css}" rel="stylesheet" />
 
 </head>
 
 <body>
 
-<!-- Navigation -->
-<!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top"  style="background-color:black;">
-    <div class="container mb-1">
-     <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>
-      <a class="navbar-brand" style="color:black;font-weight:bold;padding-top: 11px;padding-left: 7px" href="/">경북분원</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              	경북분원 소개
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item" href="/abt/greet">인사말</a>
-              <a class="dropdown-item" href="/abt/org">조직도 및 업무별 담당자</a>
-              <a class="dropdown-item" href="/abt/map">찾아오시는길</a>
-           	</div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              	연구분야
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="/dev/res-field">연구분야</a>
-              <a class="dropdown-item" href="/dev/res-result">연구성과</a>
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top" style="background-color:black;">
+        <div class="container mb-1">
+            <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>
+            <a class="navbar-brand" style="color:black;font-weight:bold;padding-top: 11px;padding-left: 7px" href="/">경북분원</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            경북분원 소개
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="/abt/greet">인사말</a>
+                            <a class="dropdown-item" href="/abt/org">조직도 및 업무별 담당자</a>
+                            <a class="dropdown-item" href="/abt/map">찾아오시는길</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            연구분야
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="/dev/res-field">연구분야</a>
+                            <a class="dropdown-item" href="/dev/res-result">연구성과</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            알림마당
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="/alert/notice">공지사항</a>
+                            <a class="dropdown-item" href="/alert/business">사업공고</a>
+                            <a class="dropdown-item" href="/alert/qna">Q&A</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:black" href="/login">로그인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:black" href="/signup">회원가입</a>
+                    </li>
+                </ul>
             </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              	알림마당
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="/alert/business">공지사항</a>
-              <a class="dropdown-item" href="/alert/notice">사업공고</a>
-              <a class="dropdown-item" href="/alert/qna">Q/A</a>
-            </div>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" style="color:black" href="/login">로그인</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:black" href="/signup">회원가입</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        </div>
+    </nav>
 
-  <!-- Page Content -->
-  <div class="container">
+    <!-- Page Content -->
+    <div class="container">
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">공지사항
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">사업공고
 
-    </h1>
-
-    <!-- Content Row -->
-    
-      <!-- Content Column -->
-      
-		<table class="table table-hover">
-		    <thead class="thead-light">
-		      <tr>
-		        <th>번호</th>
-		        <th>제목</th>
-		        <th>작성자</th>
-		        <th>작성일</th>
-		        <th>조회수</th>
-		      </tr>
-		    </thead>
-		    <tbody>
-		      <tr>
-		        <td>1</td>
-		        <td>Doe</td>
-		        <td>john</td>
-		        <td>2019-02-12</td>
-		        <td>4</td>
-		      </tr>
-		      <tr>
-		        <td>2</td>
-		        <td>Dggdsdoe</td>
-		        <td>johwern</td>
-		        <td>2019-02-12</td>
-		        <td>41</td>
-		      </tr>
-		      <tr>
-		        <td>3</td>
-		        <td>Dasdfoe</td>
-		        <td>johddddn</td>
-		        <td>2019-02-12</td>
-		        <td>14</td>
-		      </tr>
+        </h1>
+        <form role="form" method="get">
+            <table class="table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="list : ${list}">
+                        <td th:text="${list.id}"></td>
+                        <td><a th:href="@{/alert/business/read(id=${list.id})}" th:text="${list.subject}"></a></td>
+                        <td th:text="${list.login_id}"></td>
+                        <td th:text="${#dates.format(list.created_on, 'yyyy-MM-dd HH:mm')}"></td>
+	             <td th:text="${list.contents}"></td>
+	         </tr>
 		    </tbody>
 	  </table>
       <hr/>
@@ -127,8 +110,8 @@
 		    <li class="page-item"><a class="page-link" href="#">5</a></li>
 		    <li class="page-item"><a class="page-link" href="#">다음</a></li>
 	  	</ul>
-  <div class="float-sm-right"><button type="button" class="justify-content-end btn btn-outline-primary">글쓰기</button></div><br/><br/>
-    <!-- /.row -->
+  	<div class="float-sm-right"><button type="button" class="justify-content-end btn btn-primary">등록</button></div><br/><br/>
+	</form>
   </div>
   <!-- /.container -->
 
@@ -152,8 +135,22 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script th:src="@{/js/jquery.min.js}"></script>
+  <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+  <script type="text/javascript">
+	  $(function () {
+	
+			var formObj = $("form[role='form']");
+			console.log(formObj);
+			
+			$(".btn-primary").on("click", function(){
+				formObj.attr("action", "/alert/business/regist");
+				formObj.attr("method", "get");
+				formObj.submit();
+			});
+			
+		  });
+   </script>
 
 </body>
 

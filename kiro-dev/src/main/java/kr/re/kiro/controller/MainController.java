@@ -25,11 +25,5 @@ public class MainController {
 	public String orgaization(Model model) {
 		return "abt/organization";
 	}
-	
-	@RequestMapping("/alert/business")
-	public String business(Model model) {
-		return "alert/business-announcement";
-	}
-	
-	
+
 }

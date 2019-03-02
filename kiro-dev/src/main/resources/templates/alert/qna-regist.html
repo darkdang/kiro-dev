@@ -21,7 +21,7 @@
 <body>
 
 <!-- Navigation -->
-<!-- Navigation -->
+ <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top"  style="background-color:black;">
     <div class="container mb-1">
      <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>
@@ -75,24 +75,52 @@
   <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">찾아오시는길
-
-    </h1>
-
-    <!-- Content Row -->
+    <h1 class="mt-4 mb-3">Q&A
+		<!-- <small>글쓰기</small> -->
+	</h1>
     <div class="row">
-      <!-- Content Column -->
+      <!-- <div class="col-lg-1"></div> -->
       <div class="col-lg-12 mb-4">
-        <div id="map" style="width:100%;height:400px;"></div><br/>
-		    <h2>경북분원(안동)</h2>	
-			<ul>
-				<li>주소 : 36728 경상북도 안동시 경동로 1486-18 리서치동 101호 </li>
-				<li>전화번호 : T. 054-821-5411  /  F. 054-823-5411 </li>
-			</ul>
-		</div>
+		<form role="form" method="post">
+          <div class="control-group form-group" th:object="${content}">
+            <!-- <input th:field="*{id}" type="hidden"/> -->
+            <div class="controls">
+              <label for="qnaUserName">작성자</label>
+              <!-- <input th:field="*{user_name}" type="text" class="form-control col-lg-2" id="qnaUserName"/> -->
+              <p class="help-block"></p>
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>작성일</label><br/>
+              <!-- <input th:value="*{created_on}" type="text" class="form-control col-lg-2" id="qnaDate"/> -->
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label for="qnaSubject">제목</label>
+    		  <!-- <input th:field="*{subject}" type="text" class="form-control" id="qnaSubject"> -->
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>내용</label>
+              <!-- <textarea th:field="*{contents}" class="form-control" rows="10" cols="100"></textarea> -->
+            </div>
+          </div>
+          <div class="control-group form-group">
+            <div class="controls">
+              <label>자료첨부</label>
+            </div>
+          </div>
+          <div id="success"></div>
+          <!-- For success/fail messages -->
+          <button type="submit" class="btn btn-primary">등록</button>
+          <button type="submit" class="btn btn-danger">취소</button>
+        </form>
+      </div>
+      <!-- <div class="col-lg-1"></div> -->
     </div>
-    <!-- /.row -->
-
   </div>
   <!-- /.container -->
 
@@ -118,52 +146,26 @@
   <!-- Bootstrap core JavaScript -->
   <script th:src="@{/js/jquery.min.js}"></script>
   <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f5afeb5b463cedc165d87f8a69b1915d"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f5afeb5b463cedc165d87f8a69b1915d&libraries=services,clusterer,drawing"></script>  
-  <script>
-		var container = document.getElementById('map');
-		var options = {
-			center: new daum.maps.LatLng(36.5377766, 128.80812830000002),
-			level: 3
-		};
-
-		var map = new daum.maps.Map(container, options);
-		
-		// 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
-		var mapTypeControl = new daum.maps.MapTypeControl();
-
-		// 지도에 컨트롤을 추가해야 지도위에 표시됩니다
-		// daum.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
-		map.addControl(mapTypeControl, daum.maps.ControlPosition.TOPRIGHT);
-
-		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
-		var zoomControl = new daum.maps.ZoomControl();
-		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
-		
-		// 마커가 표시될 위치입니다 
-		var markerPosition  = new daum.maps.LatLng(36.5377766, 128.80812830000002); 
-
-		// 마커를 생성합니다
-		var marker = new daum.maps.Marker({
-		    position: markerPosition
-		});
-
-		// 마커가 지도 위에 표시되도록 설정합니다
-		marker.setMap(map);
-		
-		var iwContent = '<div style="width:230px;padding:5px;">한국로봇융합연구원 경북분원</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-	    iwPosition = new daum.maps.LatLng(36.5377766, 128.80812830000002); //인포윈도우 표시 위치입니다
-
-		// 인포윈도우를 생성합니다
-		var infowindow = new daum.maps.InfoWindow({
-		    position : iwPosition, 
-		    content : iwContent 
-		});
-		  
-		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-		infowindow.open(map, marker); 
-  </script>
-  
+  <script type="text/javascript">
+	  $(function () {
+	
+			var formObj = $("form[role='form']");
+			console.log(formObj);
+			
+			$(".btn-primary").on("click", function(){
+				formObj.attr("action", "/alert/qna/regist");
+				formObj.attr("method", "post");
+				formObj.submit();
+			});
+			
+			$(".btn-danger").on("click", function(){
+				formObj.attr("action", "/alert/qna");
+				formObj.attr("method", "get");
+				formObj.submit();
+			});
+		    
+		  });
+   </script>
 
 </body>
 

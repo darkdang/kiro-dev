@@ -1,5 +1,8 @@
 package kr.re.kiro.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,14 +33,17 @@ public class NoticeController {
 	
 	@RequestMapping(value = "/alert/notice/regist", method = RequestMethod.GET)
 	public ModelAndView noticeRegistGET(Model model, HttpSession session) throws Exception {
-		return new ModelAndView("alert/notice-regist");
+		SimpleDateFormat format = new SimpleDateFormat ( "yyyy-MM-dd" );
+		Date time = new Date();
+		String curTime = format.format(time);
+		return new ModelAndView("alert/notice-regist","time",curTime);
 	}
 	
 	@RequestMapping(value = "/alert/notice/regist", method = RequestMethod.POST)
-	public ModelAndView noticeRegistPOST(Model model, HttpSession session, RedirectAttributes rttr) throws Exception {
+	public ModelAndView noticeRegistPOST(Model model, HttpSession session, RedirectAttributes rttr,@RequestParam("user_name") String userName,@RequestParam("created_on") String createdOn,@RequestParam("subject") String subject,@RequestParam("contents") String contents) throws Exception {
 		noticeService.regist("something");
 		rttr.addFlashAttribute("msg", "success");
-		return new ModelAndView("alert/notice-regist");
+		return new ModelAndView("alert/notice");
     }
 	
 	@RequestMapping(value = "/alert/notice/read", method = RequestMethod.GET)

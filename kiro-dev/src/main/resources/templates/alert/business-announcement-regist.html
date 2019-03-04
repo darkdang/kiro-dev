@@ -76,37 +76,37 @@
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h1 class="mt-4 mb-3">사업공고
+        <h2 class="mt-4 mb-3">사업공고
             <!-- <small>글쓰기</small> -->
-        </h1>
+        </h2>
         <div class="row">
             <!-- <div class="col-lg-1"></div> -->
             <div class="col-lg-12 mb-4">
                 <form role="form" method="post">
-                    <div class="control-group form-group" th:object="${content}">
+                    <div class="control-group form-group">
                         <!-- <input th:field="*{id}" type="hidden"/> -->
                         <div class="controls">
-                            <label for="businessUserName">작성자</label>
-                            <!-- <input th:field="*{user_name}" type="text" class="form-control col-lg-2" id="businessUserName"/> -->
+                            <label>작성자</label>
+                            <input th:attr="value=${user_name}" type="text" class="form-control col-lg-2" id="user_name" name="user_name"/>
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>작성일</label><br />
-                            <!-- <input th:value="*{created_on}" type="text" class="form-control col-lg-2" id="businessDate"/> -->
+                            <input th:value="${time}" type="text" class="form-control col-lg-2" id="created_on" name="created_on" readonly="readonly"/>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label for="businessSubject">제목</label>
-                            <!-- <input th:field="*{subject}" type="text" class="form-control" id="businessSubject"> -->
+                            <label>제목</label>
+                            <input th:attr="value=${subject}" type="text" class="form-control" id="subject" name="subject">
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>내용</label>
-                            <!-- <textarea th:field="*{contents}" class="form-control" rows="10" cols="100"></textarea> -->
+                            <textarea th:attr="value=${contents}" class="form-control" rows="10" cols="100" id="contents" name="contents"></textarea>
                         </div>
                     </div>
                     <div class="control-group form-group">

@@ -16,12 +16,12 @@
 
     <!-- Custom styles for this template -->
     <link th:href="@{/css/modern-business.css}" rel="stylesheet" />
+    <link th:href="@{/css/custom.css}" rel="stylesheet" />
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top" style="background-color:black;">
         <div class="container mb-1">
@@ -61,22 +61,22 @@
                             <a class="dropdown-item" href="/alert/qna">Q&A</a>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" style="color:black" href="/login">로그인</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color:black" href="/signup">회원가입</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
     </nav>
-
+    
     <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h2 class="mt-4 mb-3">연구분야
+        <h2 class="mt-4 mb-3 icon_head">연구분야
 
         </h2>
 
@@ -84,9 +84,30 @@
         <div class="row">
             <!-- Content Column -->
             <div class="col-lg-12 mb-4">
-                <h2>Section Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et temporibus, facere perferendis veniam beatae non debitis, numquam blanditiis necessitatibus vel mollitia dolorum laudantium, voluptate dolores iure maxime ducimus fugit.</p>
+                <h2 class="icon_sub">핵심 로봇 연구분야</h2>
+                <p>로봇 핵심기술의 전략적 확보를 위한 선택과 집중을 추구하고 있습니다. 정부 로봇 기본계획의 핵심기술 발전비전과 연구원의 R&D 역량을 바탕으로 세계적 경쟁력을 확보할 수 있는 4대 연구분야로서 수중로봇·의료로봇·작업지원로봇·문화로봇을 정하였습니다.</p>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+          	<img class="col-lg-10" th:src="@{/images/research_part01.jpg}"/>
+           	<div class="col-lg-1"></div>
+        </div>
+        <!-- /.row -->
+        
+        <!-- Content Row -->
+        <br/>
+        <div class="row">
+            <!-- Content Column -->
+            <div class="col-lg-12 mb-4">
+                <h2 class="icon_sub">연구개발 목표 및 추진전략</h2>
+                <p>연구원은 산업화기술, 응용기술, 자체기반기술 등 3대 연구분야를 중심으로 국내 로봇 R&D의 차별화 및 실용화를 확보하고, 세계적인 연구개발 경쟁력 확보를 최종 목표로 하고 있습니다. 이 목표달성을 위해 구체적으로 연구원은 기반기술과 응용기술을 개발하는 대학/출연연구소와 상품화를 목표로 하는 산업체 사이에서 실용화 기술연구를 통해 가교 역할을 담당하고 있습니다.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+          	<img class="col-lg-10" th:src="@{/images/research_part02.jpg}"/>
+           	<div class="col-lg-1"></div>
         </div>
         <!-- /.row -->
 

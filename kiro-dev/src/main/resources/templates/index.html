@@ -16,6 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link th:href="@{/css/modern-business.css}" rel="stylesheet" />
+    <link th:href="@{/css/custom.css}" rel="stylesheet" />
 
 </head>
 
@@ -60,12 +61,12 @@
                             <a class="dropdown-item" href="/alert/qna">Q&A</a>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" style="color:black" href="/login">로그인</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color:black" href="/signup">회원가입</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -80,24 +81,24 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item active" style="background-image: url('../images/main01.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>First Slide</h3>
-                        <p>This is a description for the first slide.</p>
+                        <h3>KIRO 경북분원</h3>
+                        <p>한국로봇융합연구원</p>
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item" style="background-image: url('../images/main02.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Second Slide</h3>
-                        <p>This is a description for the second slide.</p>
+                        <!-- <h3>Second Slide</h3>
+                        <p>This is a description for the second slide.</p> -->
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item" style="background-image: url('../images/main03.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Third Slide</h3>
-                        <p>This is a description for the third slide.</p>
+                        <!-- <h3>Third Slide</h3>
+                        <p>This is a description for the third slide.</p> -->
                     </div>
                 </div>
             </div>
@@ -115,9 +116,8 @@
     <!-- Page Content -->
     <div class="container">
 
-        <h1 class="my-4">Welcome to Modern Business</h1>
+        <!-- <h1 class="my-4">Welcome to Modern Business</h1>
 
-        <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
@@ -152,84 +152,47 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /.row -->
+        </div> -->
 
         <!-- Portfolio Section -->
-        <h2>Portfolio Heading</h2>
-
         <div class="row">
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="col-lg-4 col-sm-6 portfolio-item"><br/><h2 class="icon_sub">연구성과</h2>
+                <div class="card h-90">
+                    <a href="/dev/res-result"><img class="card-img-top" style="width:348px;height:199px" th:src="@{/images/research.jpg}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project One</a>
+                            <a href="/dev/res-result">[ICT컨버전스2018] "미래, ICT융합 통해 로봇 더 적극 활용될 것"</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                        <p class="card-text">전 산업분야에 걸친 ICT융합 기술의 현황과 미래를 조망해 보는 국내 최대의 지능정보 ICT융합 대제전﻿‘ICT 컨버전스 코리아(Convergence Korea) 2018’행사가 21일 서울 양재동 더 케이호텔에서 600여명이 참석한 가운데 성대하게 개최되었다. 한국통신학회, 한국전자통신연구원 공동주관으로 22일까지 개최되는 이번 행사에서는 스마트 교통ㆍ자율주행, 스마트 의료ㆍ헬스케어, ﻿스마트 드론ㆍ로봇, ﻿스마트 문화ㆍ생활 등 전통산업과 서비스 산업을 포함하여 ICT융합 부문이 총 망라되어 다루어진다.   </p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="col-lg-4 col-sm-6 portfolio-item"><br/><h2 class="icon_sub">공지사항</h2>
+                <div class="card h-90">
+                    <a href="/alert/notice"><img class="card-img-top" style="width:348px;height:199px" th:src="@{/images/notice.jpg}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Two</a>
+                            <a href="/alert/notice">한국로봇융합연구원 원장 모집 공고</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                        <p class="card-text">한국로봇융합연구원은 [한업기술혁신촉진법] 제42조에 따라 설립된 산업통상자원부 산하 전문생산기술연구소로서, 로봇산업 발전에 필요한 연구개발, 기술 및 기업지원 등을 통해 국가 로봇산업 발전과 기술 경쟁력 제고에 기여할 수 있도록 전문성과 혁신역량 및 경영의지를 겸비한 원장을 공개 모집하오니 많은 응모 바랍니다.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="col-lg-4 col-sm-6 portfolio-item"><br/><h2 class="icon_sub">사업공고</h2>
+                <div class="card h-90">
+                    <a href="/alert/business"><img class="card-img-top" style="width:348px;height:199px" th:src="@{/images/business.png}" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Three</a>
+                            <a href="/alert/business">2018년 로봇비즈니스 Start-Up 프로젝트 참여기업 모집 재공고</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Project Four</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Project Five</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 portfolio-item">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    <div class="card-body">
-                        <h4 class="card-title">
-                            <a href="#">Project Six</a>
-                        </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+                        <p class="card-text">부산지역 내 로봇 신시장 진출을 희망하는 중소기업의 시장진입을 지원하기 위하여 [2018년도 로봇 신시장 진출 컨설팅 지원] 신규지원 대상과제를 아래오 ㅏ같이 모집하오니 관심 있는 기업의 적극적인 참여 바랍니다.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /.row -->
 
         <!-- Features Section -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-6">
                 <h2>Modern Business Features</h2>
                 <p>The Modern Business template by Start Bootstrap includes:</p>
@@ -248,11 +211,9 @@
                 <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
             </div>
         </div>
-        <!-- /.row -->
 
         <hr>
 
-        <!-- Call to Action Section -->
         <div class="row mb-4">
             <div class="col-md-8">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
@@ -260,10 +221,9 @@
             <div class="col-md-4">
                 <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
             </div>
-        </div>
-
+        </div> -->
+        
     </div>
-    <!-- /.container -->
 
     <!-- Footer -->
     <hr />

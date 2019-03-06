@@ -7,4 +7,34 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-.tit_cont{background:url(/images/mtit.png) no-repeat 0 50%;font-size:1.6em;color:#000;padding:0 0 0 30px;margin-bottom:20px;}
+.icon_sub{background:url(/images/icon_4.png) no-repeat 0 50%;font-size:1.6em;color:#000;padding:0 0 0 30px;margin-bottom:20px;}
+
+.icon_head{background:url(/images/icon_6.png) no-repeat 0 50%;font-weight: bold;font-size:2em;color:#000;padding:0 0 0 30px;margin-bottom:20px;}
+
+.img{
+    position: relative;
+    background-image: url(/images/bg_greet.jpg);                                                               
+    height: 40vh;
+    background-size: cover;
+}
+
+.img .content{
+     position: absolute;
+     top:60%;
+     left:50%;
+     transform: translate(-10%, -50%);                                                                   
+     font-size:17px;
+     color: black;
+     z-index: 2;
+     text-align: left;
+}
+
+.greet_name {
+    font-weight: bold;
+    font-size: 1.65em;    
+    color: #004679 !important;
+}
+
+.h-90 {
+    height: 90%!important;
+}

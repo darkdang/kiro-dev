@@ -3,73 +3,74 @@
 
 <head>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-  <meta name="description" content=""/>
-  <meta name="author" content=""/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-  <title>KBKIRO</title>
+    <title>KBKIRO</title>
 
-  <!-- Bootstrap core CSS -->
-  <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
 
-  <!-- Custom styles for this template -->
-  <link th:href="@{/css/modern-business.css}" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/modern-business.css}" rel="stylesheet" />
+    <link th:href="@{/css/custom.css}" rel="stylesheet" />
 
 </head>
 
 <body>
 
-<!-- Navigation -->
- <!-- Navigation -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top"  style="background-color:black;">
-    <div class="container mb-1">
-     <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>
-      <a class="navbar-brand" style="color:black;font-weight:bold;padding-top: 11px;padding-left: 7px" href="/">경북분원</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              	경북분원 소개
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item" href="/abt/greet">인사말</a>
-              <a class="dropdown-item" href="/abt/org">조직도 및 업무별 담당자</a>
-              <a class="dropdown-item" href="/abt/map">찾아오시는길</a>
-           	</div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              	연구분야
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="/dev/res-field">연구분야</a>
-              <a class="dropdown-item" href="/dev/res-result">연구성과</a>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top" style="background-color:black;">
+        <div class="container mb-1">
+            <a href="/"><img th:src="@{/images/KIRO-ci.png}" style="width:200px;height:40px;" /></a>
+            <a class="navbar-brand" style="color:black;font-weight:bold;padding-top: 11px;padding-left: 7px" href="/">경북분원</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            경북분원 소개
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="/abt/greet">인사말</a>
+                            <a class="dropdown-item" href="/abt/org">조직도 및 업무별 담당자</a>
+                            <a class="dropdown-item" href="/abt/map">찾아오시는길</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            연구분야
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="/dev/res-field">연구분야</a>
+                            <a class="dropdown-item" href="/dev/res-result">연구성과</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            알림마당
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="/alert/notice">공지사항</a>
+                            <a class="dropdown-item" href="/alert/business">사업공고</a>
+                            <a class="dropdown-item" href="/alert/qna">Q&A</a>
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" style="color:black" href="/login">로그인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color:black" href="/signup">회원가입</a>
+                    </li> -->
+                </ul>
             </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color:black" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              	알림마당
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="/alert/notice">공지사항</a>
-              <a class="dropdown-item" href="/alert/business">사업공고</a>
-              <a class="dropdown-item" href="/alert/qna">Q&A</a>
-            </div>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" style="color:black" href="/login">로그인</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:black" href="/signup">회원가입</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+        </div>
+    </nav>
 
   <!-- Page Content -->
   <div class="container">

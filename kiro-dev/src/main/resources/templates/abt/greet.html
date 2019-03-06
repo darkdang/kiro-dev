@@ -16,12 +16,12 @@
 
     <!-- Custom styles for this template -->
     <link th:href="@{/css/modern-business.css}" rel="stylesheet" />
+    <link th:href="@{/css/custom.css}" rel="stylesheet" />
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white fixed-top" style="background-color:black;">
         <div class="container mb-1">
@@ -61,12 +61,12 @@
                             <a class="dropdown-item" href="/alert/qna">Q&A</a>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" style="color:black" href="/login">로그인</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="color:black" href="/signup">회원가입</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -76,16 +76,46 @@
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
-        <h2 class="mt-4 mb-3">인사말
+        <h2 class="mt-4 mb-3 icon_head">인사말
 
         </h2>
 
         <!-- Content Row -->
+        <!-- <img class="col-lg-12" th:src="@{/images/bg_greet.jpg}"/> -->
+        <div class="img">
+        	<div class="content">
+			<strong class="greet_name">한국로봇융합연구원(KIRO) 경북분원</strong>은<br/>
+			정부 산하 로봇전문생산 연구소로서 로봇기술혁신에 필요한 기술을<br/>
+			창조·개발하고 산업계에 제공·보급을 통하여 국내로봇산업을 육성, 선도할<br/>
+			세계적 로봇전문 실용화 연구소로 도약 발전하고자 합니다.
+			</div>
+        </div>
         <div class="row">
-            <!-- Content Column -->
+            <!-- Content Column -->            
             <div class="col-lg-12 mb-4">
-                <h2>Section Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et temporibus, facere perferendis veniam beatae non debitis, numquam blanditiis necessitatibus vel mollitia dolorum laudantium, voluptate dolores iure maxime ducimus fugit.</p>
+                <p><br/>
+					안녕하십니까? 
+					한국로봇융합연구원 (경북분원)입니다.
+					<br/><br/>
+					로봇산업은 전·후방 산업에 대한 파급효과가 지대한 대표적 융합산업으로 10년 이내에 '1인 1 로봇시대'와 함께 세계시장 1천억 달러, 국내시장은 20조원 규모로 성장이 예상되는 미래핵심 신성장동력 산업입니다.
+					<br/><br/>
+					대한민국 로봇산업 발전과 함께 성장하고 있는 한국로봇융합연구원은
+					설립 이후 지난 10여년간 30여종 이상의 다양한 로봇 제품 상용화
+					기술 개발과 수중 건설로봇 및 국민안전로봇 등 대형 국책 사업 유치 등
+					짧은 역사에 비해 괄목한 성장을 이루어 냈습니다.
+					<br/><br/>
+					하지만 최근 구글, 아마존 등 글로벌 기업의 로봇산업 진출, 중국 로봇
+					시장의 급성장, 일본의 간호 및 서비스 로봇 제품의 본격적인 시장 출시
+					등 글로벌 경쟁 심화에 따라 세계시장 선점을 위한 새로운 도약이 필요한
+					시점에 직면하였습니다.
+					<br/><br/>
+					이에 한국로봇융합연구원은 로봇기술 글로벌 실용화 연구기관으로
+					도약하고자 급변 하고 있는 대외 환경에 적응 대응하고, 로봇강국 실현에
+					기여하기 위하여 수중(해양), 의료, 문화, 철강, 국방, 안전 등 전문서비스
+					로봇분야에 세계적인 수준의 원천 기술 및 현장 중심 상용화 기술력을 확보해 나가겠습니다.
+					<br/><br/>
+					앞으로도 산·학·연·관 여러분의 지속적인 관심과 성원 부탁드립니다. 
+					감사합니다.</p>
             </div>
         </div>
         <!-- /.row -->
